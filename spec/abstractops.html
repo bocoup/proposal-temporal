@@ -893,6 +893,11 @@
           `.`
           `_`
 
+      TZTrailingChar :
+          Alpha
+          `-`
+          `_`
+
       TZChar :
           Alpha
           `.`
@@ -900,7 +905,8 @@
           `_`
 
       TimeZoneIANANameComponent :
-          TZLeadingChar TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? but not one of `.` or `..`
+          TZLeadingChar but not `.`
+          TZLeadingChar TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZChar? TZTrailingChar
 
       TimeZoneIANAName :
           TimeZoneIANANameComponent
